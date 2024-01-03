@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  background-color: rgba(225, 223, 221, 0.2);
+}
+
+.ms-Nav {
+  border-radius: var(--None, 0px);
+  background: var(--Neutral-Background-3-Rest, #F5F5F5);
+  box-shadow: -5px 0px 8px 0px rgba(0, 0, 0, 0.03) inset;
+}
+
+.ms-Grid-col {
+ padding-left: 0;
+ margin-left: 0;
+}
+
+.ms-Viewport {
+  margin: 0 1.5%;
+}
+
+.ms-FocusZone {
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 480px;
+  margin: auto;
+  background: #fff;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
