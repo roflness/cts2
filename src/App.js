@@ -1,31 +1,24 @@
 import React from 'react';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import './App.css';
+import StickyHeader from './components/StickyHeader';
+import { Default as NavMenu } from './components/NavMenu.tsx'
+import { FluentProvider, webLightTheme, Body1,  } from '@fluentui/react-components';
+import { Default as SideOverlay } from './components/SideOverlay.tsx';
+import { Default as ProjectBreadcrumb } from './components/ProjectBreadcrumb.tsx';
 
-import Navigation from './Navigation';
-import CardsSection from './CardsSection';
-import OperationsTable from './OperationsTable';
-
-
-function App() {
+export default function App() {
   return (
-    <div className="ms-Grid" dir="ltr">
-      <div className="ms-Grid-row">
-        <div className="ms-Grid-col ms-sm1 ms-xl1">
-          <Navigation />
-        </div>
-        <div className="main-element ms-Grid-col ms-sm11 ms-xl11">
-          <div className="ms-Grid-row">
-            <CardsSection />
-          </div>
-          <div className="ms-Grid-row">
-            <OperationsTable />
-          </div>
-        </div>
+    <FluentProvider theme={webLightTheme} dir="ltr">
+      <StickyHeader />
+      <div className="content-wrapper">
+        <NavMenu vertical="true" size="large" className="ms-Nav ms-Grid-col" />
+        <Body1 className="content">
+          <ProjectBreadcrumb />
+          <h2>MD230808 - Carolina Trucking Inc - CTI</h2>
+          <SideOverlay />
+        </Body1>
       </div>
-    </div>
-    
+    </FluentProvider>
   );
 }
-
-export default App;

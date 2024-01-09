@@ -14,18 +14,38 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #0F6CBD;
+  min-height: 4svh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: calc(5px + 2vmin);
+  justify-content: left;
+  /* font-size: calc(10px + 2vmin); */
   color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: fixed; /* Fix the position */
+  top: 0; /* Stick it to the top */
+  width: 100%;
+  z-index: 1000000;
+}
+
+.content-wrapper {
+  display: flex; /* Use flexbox for layout */
+  padding-top: 4svh; /* Adjust this to match StickyHeader height */
+}
+
+.content {
+  flex-grow: 1; /* Fill remaining space */
+  padding-left: 2svh; /* Adjust this to match NavMenu width */
+  padding-top: 0svh;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #185ABD;
 }
 
 @keyframes App-logo-spin {
@@ -45,6 +65,13 @@
   border-radius: var(--None, 0px);
   background: var(--Neutral-Background-3-Rest, #F5F5F5);
   box-shadow: -5px 0px 8px 0px rgba(0, 0, 0, 0.03) inset;
+  height: calc(100svh - 4svh); /* Adjust the height based on StickyHeader's height */
+  margin-top: 0vh; /* Ensure the margin starts after the StickyHeader */
+  padding-top: 4svh;
+  z-index: 100;
+  position: fixed; /* Make the element fixed */
+  top: 0vh; /* Position it right after the StickyHeader */
+  left: 0;
 }
 
 .ms-Grid-col {
@@ -65,9 +92,9 @@
   margin: auto;
   background: #fff;
   margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  padding-left: 50px;
+  display: flex; /* Use flexbox */
+  flex-direction: row; /* Arrange items horizontally */
+  padding-left: 50px; /* Adjust this to create space for the fixed navbar */
   padding-right: 50px;
   padding-bottom: 50px;
 }
