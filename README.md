@@ -1,6 +1,6 @@
 # cts2 - Raf test prototype using React Fluent UI 
 
-### 'yarn magic'
+### `yarn magic`
 Runs: yarn cache clean && yarn install && yarn start
 *Does require typescript to be added as dependency*
 
