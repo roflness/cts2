@@ -32,7 +32,7 @@ export default function ProjectDetails({ selectedProject }) {
             <InfoLabel size="medium" weight="semibold">
                 Design Team
             </InfoLabel>
-            <Body2>{projectDesignTeam} N/A</Body2>
+            <Body2>{projectDesignTeam}</Body2>
             <br></br>
             <InfoLabel size="medium" weight="semibold">
                 Organization
@@ -42,18 +42,18 @@ export default function ProjectDetails({ selectedProject }) {
             <InfoLabel size="medium" weight="semibold">
                 Site Address
             </InfoLabel>
-            <Body2>{siteAddress1} N/A</Body2>
+            <Body2>{siteAddress1}</Body2>
             <Body2>{siteAddress2}</Body2>
             <br></br>
             <InfoLabel size="medium" weight="semibold">
                 Source
             </InfoLabel>
-            <Body2>{primarySource} N/A</Body2>
+            <Body2>{primarySource}</Body2>
             <br></br>
             <InfoLabel size="medium" weight="semibold">
                 Sub Source
             </InfoLabel>
-            <Body2>{subSource} N/A</Body2>
+            <Body2>{subSource}</Body2>
         </div>
     );
 }

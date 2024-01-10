@@ -67,7 +67,7 @@ export const projects = [
     projectLead: "Jonathan Torres",
     projectDesignTeam: "Shakira Davis",
     description: "Description for Project 1",
-    icon: <FleetsIcon />,
+    icon: <ACWIcon />,
     // Add more details specific to Project 1
   },
   {

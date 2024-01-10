@@ -72,7 +72,7 @@
   border-radius: var(--None, 0px);
   background: var(--Neutral-Background-3-Rest, #F5F5F5);
   box-shadow: -5px 0px 8px 0px rgba(0, 0, 0, 0.03) inset;
-  height: calc(100svh - 4svh);
+  height: calc(100svh - 8svh);
   /* Adjust the height based on StickyHeader's height */
   margin-top: 0vh;
   /* Ensure the margin starts after the StickyHeader */
@@ -115,7 +115,7 @@
 
 .project-profile-pane {
   /* Example styles for the project profile pane */
-  width: 300px;
+  width: 250px;
   /* Adjust the width as needed */
   background-color: #FFFFFF;
   padding: 0px;
