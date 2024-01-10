@@ -5,28 +5,21 @@ import {
     BreadcrumbDivider,
     BreadcrumbButton,
 } from "@fluentui/react-components";
-import {
-    // CalendarMonthFilled,
-    // CalendarMonthRegular,
-    VehicleBusFilled,
-    VehicleBusRegular,
-    bundleIcon,
-} from "@fluentui/react-icons";
 
-// const CalendarMonth = bundleIcon(CalendarMonthFilled, CalendarMonthRegular);
-const FleetsIcon = bundleIcon(VehicleBusFilled, VehicleBusRegular);
-const path = "https://www.bing.com/";
+// const path = "https://www.bing.com/";
 
-export const Default = () => {
+export const Default = ({ selectedProject }) => {
+    const { projectNumber, icon } = selectedProject;
+
     return (
         <Breadcrumb aria-label="Breadcrumb">
             <BreadcrumbItem>
-                <BreadcrumbButton href={path}>Project</BreadcrumbButton>
+                <BreadcrumbButton>Project</BreadcrumbButton>
             </BreadcrumbItem>
             <BreadcrumbDivider />
             <BreadcrumbItem>
-                <BreadcrumbButton href={path} icon={<FleetsIcon />}>
-                    MD230808
+                <BreadcrumbButton icon={icon}>
+                    {projectNumber}
                 </BreadcrumbButton>
             </BreadcrumbItem>
         </Breadcrumb>
