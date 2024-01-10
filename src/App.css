@@ -27,20 +27,26 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  position: fixed; /* Fix the position */
-  top: 0; /* Stick it to the top */
+  position: fixed;
+  /* Fix the position */
+  top: 0;
+  /* Stick it to the top */
   width: 100%;
   z-index: 1000000;
 }
 
 .content-wrapper {
-  display: flex; /* Use flexbox for layout */
-  padding-top: 4svh; /* Adjust this to match StickyHeader height */
+  display: flex;
+  /* Use flexbox for layout */
+  padding-top: 4svh;
+  /* Adjust this to match StickyHeader height */
 }
 
 .content {
-  flex-grow: 1; /* Fill remaining space */
-  padding-left: 2svh; /* Adjust this to match NavMenu width */
+  flex-grow: 1;
+  /* Fill remaining space */
+  padding-left: 2svh;
+  /* Adjust this to match NavMenu width */
   padding-top: 0svh;
 }
 
@@ -52,6 +58,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -65,18 +72,22 @@
   border-radius: var(--None, 0px);
   background: var(--Neutral-Background-3-Rest, #F5F5F5);
   box-shadow: -5px 0px 8px 0px rgba(0, 0, 0, 0.03) inset;
-  height: calc(100svh - 4svh); /* Adjust the height based on StickyHeader's height */
-  margin-top: 0vh; /* Ensure the margin starts after the StickyHeader */
+  height: calc(100svh - 4svh);
+  /* Adjust the height based on StickyHeader's height */
+  margin-top: 0vh;
+  /* Ensure the margin starts after the StickyHeader */
   padding-top: 4svh;
   z-index: 100;
-  position: fixed; /* Make the element fixed */
-  top: 0vh; /* Position it right after the StickyHeader */
+  position: fixed;
+  /* Make the element fixed */
+  top: 0vh;
+  /* Position it right after the StickyHeader */
   left: 0;
 }
 
 .ms-Grid-col {
- padding-left: 0;
- margin-left: 0;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .ms-Viewport {
@@ -92,9 +103,37 @@
   margin: auto;
   background: #fff;
   margin-top: 50px;
-  display: flex; /* Use flexbox */
-  flex-direction: row; /* Arrange items horizontally */
-  padding-left: 50px; /* Adjust this to create space for the fixed navbar */
+  display: flex;
+  /* Use flexbox */
+  flex-direction: row;
+  /* Arrange items horizontally */
+  padding-left: 50px;
+  /* Adjust this to create space for the fixed navbar */
   padding-right: 50px;
   padding-bottom: 50px;
+}
+
+.project-profile-pane {
+  /* Example styles for the project profile pane */
+  width: 300px;
+  /* Adjust the width as needed */
+  background-color: #FFFFFF;
+  padding: 0px;
+  height: calc(100svh - 7.5svh);
+  border: 1px solid #ccc;
+  /* border-radius: var(--None, 0px); */
+  border-top: 1px solid var(--Edge-divider, #E0E0E0);
+  border-right: 1px solid var(--Edge-divider, #E0E0E0);
+  border-bottom: var(--None, 0px) solid var(--Edge-divider, #E0E0E0);
+  border-left: var(--None, 0px) solid var(--Edge-divider, #E0E0E0);
+  /* Add more styles for positioning and appearance */
+  text-align: center;
+  letter-spacing: -0.8px;
+  line-height: 10px;
+}
+
+.project-details {
+  /* Other project details styles */
+  /* Left align the details */
+  text-align: left;
 }
