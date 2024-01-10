@@ -42,7 +42,7 @@ export const Default = ({ selectedProject, handleProjectChange }) => {
     const { projectNumber, icon } = selectedProject;
 
     const handleBreadcrumbClick = () => {
-        handleProjectChange('0'); // Assuming '0' represents the default project ID
+        handleProjectChange([0]); // Assuming '0' represents the default project ID
     };
 
     return (
