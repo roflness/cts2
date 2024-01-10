@@ -1,6 +1,7 @@
 import React from 'react';
 import { Default as SideOverlay } from './SideOverlay.tsx';
-import ProjectBadge from './ProjectBadge.tsx'
+import ProjectBadge from './ProjectBadge.tsx';
+import ProjectDetails from './ProjectDetails.tsx';
 
 export default function ProjectProfilePane({ selectedProject }) {
     const { projectNumber, projectName, organizationName, program, programPhase, projectStatus } = selectedProject;
@@ -15,6 +16,8 @@ export default function ProjectProfilePane({ selectedProject }) {
             <ProjectBadge text1={program} text2={programPhase} text3={projectStatus}/>
             <br></br>
             <div className='project-details'>
+                <ProjectDetails selectedProject={selectedProject}/>
+                <br></br>
               <SideOverlay />
             </div>
         </div>
