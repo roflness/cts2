@@ -64,19 +64,37 @@ export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
     <div className={styles.root}>
       <TabList vertical className='ms-Nav'>
         <Tab icon={<SearchIcon />} value="search">Search</Tab>
-        <Tab icon={<HomeIcon />} value="tab0">Dashboard</Tab>
-        <Tab icon={<FolderIcon />} ><Link style={{ textDecoration: 'none' }} to="/tab1">Projects</Link></Tab>
-        <Tab icon={<BuildingIcon />} ><Link style={{ textDecoration: 'none' }} to="/tab2">Organization</Link></Tab>
-        <Tab icon={<ActivityIcon />} value="tab3">Activity</Tab>
+        <Tab icon={<HomeIcon />} value="dashboard">
+          <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/dashboard">
+            Dashboard
+          </Link>
+        </Tab>
+        <Tab icon={<FolderIcon />} value="projects">
+          <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/projects">
+            Projects
+          </Link>
+        </Tab>
+        <Tab icon={<BuildingIcon />} value="organization">
+          <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/organization">
+            Organization
+          </Link>
+        </Tab>
+        <Tab icon={<ActivityIcon />} value="activity">
+          <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/activity">
+            Activity
+          </Link>
+        </Tab>
         <br /><br /><br />
         <Text className={styles.subtitle}>Favorites</Text>
         {projects.map((project) => (
           <Tab
             key={project.id}
-            icon={project.icon || <FleetsIcon />} // Replace with appropriate icon
+            icon={project.icon || <FleetsIcon />}
             value={project.id}
+            handleProjectChange={handleProjectChange}
+            // onclick={handleProjectChange}
             onClick={() => changeProject(project.id)}
-            selected={project.id === selectedProjectId}
+            selected={selectedProjectId === project.id} // Set selected prop based on comparison
           >
             {project.projectNumber}
           </Tab>

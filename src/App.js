@@ -4,28 +4,59 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 import './App.css';
 import StickyHeader from './components/StickyHeader';
 import { Default as NavMenu } from './components/NavMenu.tsx'
-import { FluentProvider, webLightTheme } from '@fluentui/react-components';
+import { FluentProvider, webLightTheme, Body1 } from '@fluentui/react-components';
 import { projects } from './mock-data/ProjectData.js';
 import Project from "./pages/Project.tsx";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProjectDataGrid from './pages/ProjectDataGrid.tsx';
 import Organization from "./pages/Organization.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
+import Activity from "./pages/Activity.tsx";
 
 export default function App() {
-  const [selectedProject, setSelectedProject] = useState(projects[0]); // Initially select the first project
-  const [isProjectVisible, setIsProjectVisible] = useState(false); // Initially set project as not visible
+  const [selectedProject, setSelectedProject] = useState(projects[0]);
+  const [isProjectVisible, setIsProjectVisible] = useState(false);
+
+  // const handleProjectChange = (projectId) => {
+  //   const project = projects.find((proj) => proj.id === projectId);
+  
+  //   setIsProjectVisible((prevVisible) => {
+  //     if (project) {
+  //       if (selectedProject.id === projectId) {
+  //         return prevVisible; // Toggle visibility if the same project is clicked
+  //       }
+  //       setSelectedProject(project); // Set the new selected project
+  //       return true; // Show the Project component when a different project is clicked
+  //     } else {
+  //       // Reset to default project state as the selected project is not found
+  //       setSelectedProject(projects[0]);
+  //       return false; // Hide the Project component
+  //     }
+  //   });
+  // };
 
   const handleProjectChange = (projectId) => {
+    if (projectId === 'projects') { // Replace 'tab2' with the ID for the Projects tab
+      setIsProjectVisible(false); // Hide the ProjectDataGrid when switching to the Projects tab
+      setSelectedProject(projects[0]); // Set the selected project to the first favorite project by default
+      return;
+    }
+  
     const project = projects.find((proj) => proj.id === projectId);
-    // setSelectedProject(project);
-
-    // Toggle visibility only if a different project is selected
-    if (selectedProject.id !== projectId) {
-      setSelectedProject(project);
-      setIsProjectVisible(true); // Show the Project component when a different project is selected
-    } else {
-      setIsProjectVisible(!isProjectVisible); // Toggle visibility if the same project is selected
-    } 
+  
+    setIsProjectVisible((prevVisible) => {
+      if (project) {
+        if (selectedProject.id === projectId) {
+          return prevVisible; // Toggle visibility if the same project is clicked
+        }
+        setSelectedProject(project); // Set the new selected project
+        return true; // Show the Project component when a different project is clicked
+      } else {
+        // Reset to default project state as the selected project is not found
+        setSelectedProject(projects[0]);
+        return false; // Hide the Project component
+      }
+    });
   };
 
   return (
@@ -42,15 +73,18 @@ export default function App() {
             selectedProjectId={selectedProject.id}
             projects={projects} // Ensure the projects prop is passed correctly
           />
+          {isProjectVisible && <Project selectedProject={selectedProject} />}
+
           <Routes>
             {/* <Route path="/tab1" element={<Component1 />} /> Default page */}
-            <Route path="/tab1" element={<ProjectDataGrid projects={projects} />} />
-            <Route path="/tab2" element={<Organization projects={projects} />} />
-
+            <Route path="*" element={<Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} />
+            <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} />
+            {/* <Route path="/projects" index element={<Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} /> */}
+            <Route path="/organization" element={isProjectVisible ? null : <Body1 className="content"><Organization projects={projects} /></Body1>} />
+            <Route path="/dashboard" element={isProjectVisible ? null : <Body1 className="content"><Dashboard projects={projects} /></Body1>} />
+            <Route path="/activity" element={isProjectVisible ? null : <Body1 className="content"><Activity projects={projects} /></Body1>} />
             {/* <Route exact path="/project" component={NewComponentPage} /> */}
-            {/* Define other routes as needed */}
           </Routes>
-          {isProjectVisible && <Project selectedProject={selectedProject} />}
           {/* <Project selectedProject={selectedProject}/> */}
         </div>
       </FluentProvider>
