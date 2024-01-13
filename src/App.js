@@ -96,7 +96,7 @@ export default function App() {
 
               <Routes>
                 {/* <Route path="/tab1" element={<Component1 />} /> Default page */}
-                <Route path="/" element={<Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
+                <Route path="/*" element={<Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
                 <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
                 {/* <Route path="/projects" index element={<Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} /> */}
                 <Route path="/organization" element={isProjectVisible ? null : <Body1 className="content"><Organization projects={projects} /></Body1>} />
