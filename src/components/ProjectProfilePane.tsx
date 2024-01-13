@@ -1,5 +1,5 @@
 import React from 'react';
-import { Default as SideOverlay } from './SideOverlay.tsx';
+// import { Default as SideOverlay } from './SideOverlay.tsx';
 import ProjectBadge from './ProjectBadge.tsx';
 import ProjectDetails from './ProjectDetails.tsx';
 

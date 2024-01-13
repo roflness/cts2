@@ -70,21 +70,6 @@ export default function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  const projects2 = [
-    { projectNumber: "123", projectName: "Project 1" },
-    { projectNumber: "456", projectName: "Project 2" },
-  ];
-
-  const organizations = [
-    { organizationName: "Org 1" },
-    { organizationName: "Org 2" },
-  ];
-
-  const activities = [
-    { activityName: "Activity 1" },
-    { activityName: "Activity 2" },
-  ];
-
   return (
     <Router>
       <FluentProvider theme={isDarkMode ? webDarkTheme : webLightTheme} dir="ltr">
@@ -112,7 +97,7 @@ export default function App() {
               <Routes>
                 {/* <Route path="/tab1" element={<Component1 />} /> Default page */}
                 <Route path="/" element={<Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
-                <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects2} /></Body1>} />
+                <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
                 {/* <Route path="/projects" index element={<Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} /> */}
                 <Route path="/organization" element={isProjectVisible ? null : <Body1 className="content"><Organization projects={projects} /></Body1>} />
                 <Route path="/dashboard" element={isProjectVisible ? null : <Body1 className="content3"><Dashboard projects={projects} /></Body1>} />

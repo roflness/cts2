@@ -6,27 +6,24 @@ import {
     Tab,
     TabList
 } from "@fluentui/react-components";
-import {
-    AirplaneRegular,
-    AirplaneFilled,
-    AirplaneTakeOffRegular,
-    AirplaneTakeOffFilled,
-    TimeAndWeatherRegular,
-    TimeAndWeatherFilled,
-    bundleIcon,
-} from "@fluentui/react-icons";
+// import {
+//     AirplaneRegular,
+//     AirplaneFilled,
+//     AirplaneTakeOffRegular,
+//     AirplaneTakeOffFilled,
+//     TimeAndWeatherRegular,
+//     TimeAndWeatherFilled,
+//     bundleIcon
+// } from "@fluentui/react-icons";
 import type {
     SelectTabData,
     SelectTabEvent,
     TabValue
 } from "@fluentui/react-components";
 
-const Airplane = bundleIcon(AirplaneFilled, AirplaneRegular);
-const AirplaneTakeOff = bundleIcon(
-    AirplaneTakeOffFilled,
-    AirplaneTakeOffRegular
-);
-const TimeAndWeather = bundleIcon(TimeAndWeatherFilled, TimeAndWeatherRegular);
+// const Airplane = bundleIcon(AirplaneFilled, AirplaneRegular);
+// const AirplaneTakeOff = bundleIcon(AirplaneTakeOffFilled,AirplaneTakeOffRegular);
+// const TimeAndWeather = bundleIcon(TimeAndWeatherFilled, TimeAndWeatherRegular);
 
 const useStyles = makeStyles({
     root: {
