@@ -9,16 +9,16 @@ export default function ProjectProfilePane({ selectedProject }) {
     return (
         <div className="project-profile-pane">
             {/* Add content for the project profile */}
-            <h3>{projectNumber}</h3>
+            <h4>{projectNumber}</h4>
             <h2>{organizationName}</h2>
             <h2>{projectName}</h2>
             {/* Add other details or components */}
-            <ProjectBadge text1={program} text2={programPhase} text3={projectStatus}/>
+            <ProjectBadge text1={program} text2={programPhase} text3={projectStatus} />
             <br></br>
             <div className='project-details'>
-                <ProjectDetails selectedProject={selectedProject}/>
+                <ProjectDetails selectedProject={selectedProject} />
                 <br></br>
-              <SideOverlay />
+                {/* <SideOverlay /> */}
             </div>
         </div>
     );

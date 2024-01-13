@@ -9,6 +9,7 @@
     "@fluentui/react-components": "^9.43.3",
     "@fluentui/react-icons": "^2.0.224",
     "@fluentui/react-native": "^0.39.10",
+    "@fluentui/react-tabs": "^9.4.3",
     "@fluentui/web-components": "^2.5.16",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

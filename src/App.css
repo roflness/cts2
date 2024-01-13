@@ -43,11 +43,28 @@
 }
 
 .content {
-  flex-grow: 1;
+  flex-grow: 0;
   /* Fill remaining space */
   padding-left: 2svh;
   /* Adjust this to match NavMenu width */
   padding-top: 0svh;
+}
+
+.content2 {
+  flex-grow: 2;
+  /* Fill remaining space */
+  padding-left: 0svh;
+  /* Adjust this to match NavMenu width */
+  padding-top: 0svh;
+}
+
+.content3 {
+  /* position: relative; */
+  padding-left: 2svh;
+  display: flex;
+  flex-direction: column;
+  /* width: 70%; */
+  height: calc(100svh - 22svh);
 }
 
 .App-link {
@@ -136,4 +153,21 @@
   /* Other project details styles */
   /* Left align the details */
   text-align: left;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 1;
+  left: 1;
+  bottom: 1;
+  right: 1;
+  width: 82%;
+  height: 80%;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 65%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }

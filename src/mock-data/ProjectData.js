@@ -11,7 +11,7 @@ const ACWIcon = bundleIcon(BuildingHomeFilled, BuildingHomeRegular);
 
 export const projects = [
   {
-    id: 1,
+    "id": 2906,
     projectNumber: "MD200080",
     projectName: "Revolv",
     organizationName: "Revolv",
@@ -25,8 +25,8 @@ export const projects = [
     siteAddress2: "San Diego, CA 92154",
     primarySource: "Internal Referral",
     subSource: "CS Team",
+    ownershipOption: "Option 2: Customer",
     icon: <FleetsIcon />,
-    // Add more details specific to Project 1
   },
   {
     id: 2,

@@ -20,6 +20,7 @@ export default function ProjectDetails({ selectedProject }) {
         , siteAddress2
         , primarySource
         , subSource
+        , ownershipOption
      } = selectedProject;
 
     return (
@@ -54,6 +55,11 @@ export default function ProjectDetails({ selectedProject }) {
                 Sub Source
             </InfoLabel>
             <Body2>{subSource}</Body2>
+            <br></br>
+            <InfoLabel size="medium" weight="semibold">
+                Ownership Option
+            </InfoLabel>
+            <Body2>{ownershipOption}</Body2>
         </div>
     );
 }
