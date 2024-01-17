@@ -49,10 +49,12 @@ export default function App() {
       if (project) {
         if (selectedProject.id === projectId) {
           console.log('Same project clicked. Visibility toggle:', !prevVisible);
-          return !prevVisible; // Toggle visibility if the same project is clicked
+          return false; // Toggle visibility if the same project is clicked
         }
 
         console.log('Switching to a different project. New selected project:', project);
+        console.log('IsProjectVisibile:', prevVisible);
+
         setSelectedProject(project); // Set the new selected project
         return true; // Show the Project component when a different project is clicked
       } else {
@@ -95,16 +97,13 @@ export default function App() {
               {isProjectVisible && <Project selectedProject={selectedProject} />}
 
               <Routes>
-                {/* <Route path="/tab1" element={<Component1 />} /> Default page */}
-                <Route path="/*" element={<Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
+                <Route path="/*" element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
+                console.log('isProjectVisible:', isProjectVisible);
                 <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
-                {/* <Route path="/projects" index element={<Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} /> */}
                 <Route path="/organization" element={isProjectVisible ? null : <Body1 className="content"><Organization projects={projects} /></Body1>} />
                 <Route path="/dashboard" element={isProjectVisible ? null : <Body1 className="content3"><Dashboard projects={projects} /></Body1>} />
                 <Route path="/activity" element={isProjectVisible ? null : <Body1 className="content"><Activity projects={projects} /></Body1>} />
                 <Route path="/report" element={isProjectVisible ? null : <Body1 className="content3"><Report projects={projects} /></Body1>} />
-
-                {/* <Route exact path="/project" component={NewComponentPage} /> */}
               </Routes>
             </div>
           </Stack>

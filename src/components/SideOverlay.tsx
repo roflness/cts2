@@ -7,8 +7,9 @@ import {
   Button,
 } from "@fluentui/react-components";
 import { Dismiss24Regular } from "@fluentui/react-icons";
+import { Default as Input} from "./Input.tsx";
 
-export const Default = () => {
+export const Default = ({ selectedProject }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -35,7 +36,8 @@ export const Default = () => {
         </DrawerHeader>
 
         <DrawerBody>
-          <p>Drawer content example</p>
+          {/* <p>Drawer content example</p> */}
+          <Input selectedProject={selectedProject} />
         </DrawerBody>
       </OverlayDrawer>
 

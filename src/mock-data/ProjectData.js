@@ -40,7 +40,6 @@ export const projects = [
     projectDesignTeam: "Shakira Davis",
     description: "Description for Project 1",
     icon: <FleetsIcon />,
-    // Add more details specific to Project 1
   },
   {
     id: 3,
@@ -54,7 +53,6 @@ export const projects = [
     projectDesignTeam: "Shakira Davis",
     description: "Description for Project 1",
     icon: <FleetsIcon />,
-    // Add more details specific to Project 1
   },
   {
     id: 4,
@@ -68,7 +66,6 @@ export const projects = [
     projectDesignTeam: "Shakira Davis",
     description: "Description for Project 1",
     icon: <ACWIcon />,
-    // Add more details specific to Project 1
   },
   {
     id: 5,
@@ -82,7 +79,6 @@ export const projects = [
     projectDesignTeam: "Shakira Davis",
     description: "Description for Project 2",
     icon: <ACWIcon />,
-    // Add more details specific to Project 2
   },
   // Add more projects as needed
 ];

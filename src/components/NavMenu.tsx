@@ -67,6 +67,7 @@ export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
     console.log(`Changing project to ${projectId}`);
     if (selectedProjectId === projectId) {
       console.log(`Project already selected, skipping unnecessary update`);
+      console.log(`selectedProjetctId:`, {selectedProjectId});
       return; // Avoid unnecessary updates if the project is already selected
     }
   

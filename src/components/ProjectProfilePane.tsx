@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Default as SideOverlay } from './SideOverlay.tsx';
+import { Default as SideOverlay } from './SideOverlay.tsx';
 import ProjectBadge from './ProjectBadge.tsx';
 import ProjectDetails from './ProjectDetails.tsx';
 
@@ -18,7 +18,7 @@ export default function ProjectProfilePane({ selectedProject }) {
             <div className='project-details'>
                 <ProjectDetails selectedProject={selectedProject} />
                 <br></br>
-                {/* <SideOverlay /> */}
+                <SideOverlay selectedProject={selectedProject}/>
             </div>
         </div>
     );
