@@ -59,7 +59,12 @@ const useStyles = makeStyles({
 export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
   handleProjectChange: (projectId: string) => void;
   selectedProjectId: string;
-  projects: { id: string; projectNumber: string; icon: React.JSX.Element; }[];
+  projects: {
+    id: string;
+    projectNumber: string;
+    isFavorite: boolean; // This is the property indicating whether the project is a favorite
+    icon: React.JSX.Element;
+  }[];
 }) => {
   const navigate = useNavigate();
 
@@ -67,22 +72,22 @@ export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
     console.log(`Changing project to ${projectId}`);
     if (selectedProjectId === projectId) {
       console.log(`Project already selected, skipping unnecessary update`);
-      console.log(`selectedProjetctId:`, {selectedProjectId});
+      console.log(`selectedProjetctId:`, { selectedProjectId });
       return; // Avoid unnecessary updates if the project is already selected
     }
-  
+
     handleProjectChange(projectId);
-  
+
     const selectedProject = projects.find(project => project.id === projectId);
     if (selectedProject) {
       console.log(`Navigating to /projects/${selectedProject.projectNumber}`);
       navigate(`/projects/${selectedProject.projectNumber}`);
     } else {
       console.log(`Project not found in the list`);
-      console.log({selectedProject})
+      console.log({ selectedProject })
     }
   };
-  
+
 
 
   return (
@@ -118,19 +123,19 @@ export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
         </Tab>
         <br /><br /><br />
         <Text className={useStyles.subtitle}>Favorites</Text>
-        {projects.map((project) => (
-          <Tab
-            key={project.id}
-            icon={project.icon || <FleetsIcon />}
-            value={project.projectNumber}
-            // handleProjectChange={handleProjectChange}
-            // onclick={handleProjectChange}
-            onClick={() => changeProject(project.id)}
-            selected={selectedProjectId === project.id} // Set selected prop based on comparison
-          >
-            <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={`/projects/${project.projectNumber}`}>{project.projectNumber}</Link>
-          </Tab>
-        ))}
+        {projects
+          .filter((project) => project.isFavorite) // Filter projects based on the isFavorite flag
+          .map((project) => (
+            <Tab
+              key={project.id}
+              icon={project.icon || <FleetsIcon />}
+              value={project.projectNumber}
+              onClick={() => changeProject(project.id)}
+              selected={selectedProjectId === project.id}
+            >
+              <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={`/projects/${project.projectNumber}`}>{project.projectNumber}</Link>
+            </Tab>
+          ))}
         <br /><br /><br />
         <Text className={useStyles.subtitle}>Links</Text>
         <a href="https://github.com/roflness/cts2" target="_blank" rel="noreferrer">

@@ -97,13 +97,13 @@ export default function App() {
               {isProjectVisible && <Project selectedProject={selectedProject} />}
 
               <Routes>
-                <Route path="/*" element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
+                <Route path="/*" element={isProjectVisible ? null : <Body1 className="content3"><ProjectDataGrid projects={projects} /></Body1>} />
                 console.log('isProjectVisible:', isProjectVisible);
-                <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid items={projects} /></Body1>} />
-                <Route path="/organization" element={isProjectVisible ? null : <Body1 className="content"><Organization projects={projects} /></Body1>} />
-                <Route path="/dashboard" element={isProjectVisible ? null : <Body1 className="content3"><Dashboard projects={projects} /></Body1>} />
-                <Route path="/activity" element={isProjectVisible ? null : <Body1 className="content"><Activity projects={projects} /></Body1>} />
-                <Route path="/report" element={isProjectVisible ? null : <Body1 className="content3"><Report projects={projects} /></Body1>} />
+                <Route path="/projects" index element={isProjectVisible ? null : <Body1 className="content"><ProjectDataGrid projects={projects} /></Body1>} />
+                <Route path="/organization" element={isProjectVisible ? null : <Body1 className="content"><Organization /></Body1>} />
+                <Route path="/dashboard" element={isProjectVisible ? null : <Body1 className="content3"><Dashboard /></Body1>} />
+                <Route path="/activity" element={isProjectVisible ? null : <Body1 className="content"><Activity /></Body1>} />
+                <Route path="/report" element={isProjectVisible ? null : <Body1 className="content3"><Report /></Body1>} />
               </Routes>
             </div>
           </Stack>

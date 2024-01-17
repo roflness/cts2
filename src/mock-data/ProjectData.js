@@ -12,6 +12,7 @@ const ACWIcon = bundleIcon(BuildingHomeFilled, BuildingHomeRegular);
 export const projects = [
   {
     "id": 2906,
+    isFavorite: true,
     projectNumber: "MD200080",
     projectName: "Revolv",
     organizationName: "Revolv",
@@ -30,6 +31,7 @@ export const projects = [
   },
   {
     id: 2,
+    isFavorite: false,
     projectNumber: "MD200100",
     projectName: "Santee Site - Phase 1",
     organizationName: "TC Construction Inc.",
@@ -43,6 +45,7 @@ export const projects = [
   },
   {
     id: 3,
+    isFavorite: true,
     projectNumber: "MD230808",
     projectName: "CTI",
     organizationName: "Carolina Trucking Inc",
@@ -56,6 +59,7 @@ export const projects = [
   },
   {
     id: 4,
+    isFavorite: true,
     projectNumber: "E220168",
     projectName: "3825 Centre St",
     organizationName: "Loma Crest",
@@ -69,6 +73,7 @@ export const projects = [
   },
   {
     id: 5,
+    isFavorite: false,
     projectNumber: "E220334",
     projectName: "3825 Centre St",
     organizationName: "Loma Crest",

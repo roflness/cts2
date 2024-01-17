@@ -1,29 +1,42 @@
 import * as React from "react";
 import { makeStyles, Button } from "@fluentui/react-components";
-import {
-  bundleIcon,
-  CalendarMonthFilled,
-  CalendarMonthRegular,
-} from "@fluentui/react-icons";
 
-// const CalendarMonth = bundleIcon(CalendarMonthFilled, CalendarMonthRegular);
 
 const useStyles = makeStyles({
   wrapper: {
     columnGap: "15px",
     display: "flex",
+    direction: "column",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    // gap:"spacing-xs",
+    // verticalAlign:"center"
   },
 });
 
-export const Appearance = () => {
+export const Appearance = ({ onCloseDrawer }) => {
   const styles = useStyles();
+
+  const handleSave = () => {
+    // Perform save logic here
+    // ...
+
+    // Close the drawer after save
+    onCloseDrawer();
+  };
+
+  const handleEdit = () => {
+    // Perform edit logic here
+    // ...
+
+    // Close the drawer after edit
+    onCloseDrawer();
+  };
 
   return (
     <div className={styles.wrapper}>
-      <Button>Cancel</Button>
-      <Button appearance="primary" icon={<CalendarMonthRegular />}>
-        Save
-      </Button>
+      <Button appearance="secondary" onClick={handleEdit}>Cancel</Button>
+      <Button appearance="primary" onClick={handleSave}>Save</Button>
     </div>
   );
 };

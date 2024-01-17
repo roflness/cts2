@@ -108,7 +108,7 @@ export function Default({ selectedProject }) {
         <Label htmlFor={siteAddress2}>Address Line 2</Label>
         <Input type="text" id={siteAddress2} value={siteAddress2} />
       </div>
-
+      
     </form>
   );
 }
