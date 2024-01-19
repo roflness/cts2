@@ -4,7 +4,8 @@ import {
   Tab,
   TabList,
   typographyStyles,
-  Text,
+  // Text,
+  MenuGroupHeader
   // Button
 } from "@fluentui/react-components";
 import * as React from "react";
@@ -122,7 +123,7 @@ export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
           </Link>
         </Tab>
         <br /><br /><br />
-        <Text className={useStyles.subtitle}>Favorites</Text>
+        <MenuGroupHeader>Favorites</MenuGroupHeader>
         {projects
           .filter((project) => project.isFavorite) // Filter projects based on the isFavorite flag
           .map((project) => (
@@ -137,7 +138,7 @@ export const Default = ({ handleProjectChange, selectedProjectId, projects }: {
             </Tab>
           ))}
         <br /><br /><br />
-        <Text className={useStyles.subtitle}>Links</Text>
+        <MenuGroupHeader>Links</MenuGroupHeader>
         <a href="https://github.com/roflness/cts2" target="_blank" rel="noreferrer">
           <Tab value="GH Link">GitHub Repo</Tab>
         </a>

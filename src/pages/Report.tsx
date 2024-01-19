@@ -6,8 +6,8 @@ const reports = {
     report2: '<iframe title="Report 2" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=eeff2065-a60c-41f1-9507-78334fb01f05&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
     report3: '<iframe title="Report 3" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=1fbd2d69-38a1-40c3-a254-4b322c51f38d&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
     report4: '<iframe title="Report 4" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=223e999a-4730-4173-ba5b-5fbe94e71e7e&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
-    report5: '<iframe title="Report 4" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=c2ee15dd-8211-4999-acc8-8d08518f1f16&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
-    report6: '<iframe title="Report 4" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=e1b09aa9-94d9-4bfd-8065-a2d4edda674c&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
+    report5: '<iframe title="Report 5" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=c2ee15dd-8211-4999-acc8-8d08518f1f16&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
+    report6: '<iframe title="Report 6" class="responsive-iframe" src="https://app.powerbi.com/reportEmbed?reportId=e1b09aa9-94d9-4bfd-8065-a2d4edda674c&autoAuth=true&ctid=a2e7980c-11ea-4838-8f1a-2f497d8c4072" frameborder="1" allowFullScreen="true"></iframe>',
 
     
 };
